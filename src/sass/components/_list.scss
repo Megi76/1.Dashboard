@@ -1,0 +1,45 @@
+.navigation {
+  margin-top: 1rem;
+  top: 0;
+  left: 0;
+  
+  .navigation-list {
+    list-style: none;
+    padding: 0;
+    
+    .navigation-item {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      padding: 1rem 1rem;
+    }
+    
+    .icons {
+      @include icons;
+    }
+    
+    .navigation-item:hover {
+      background-color: $hover-background;
+      border-left: orange solid 4px;
+    }
+    
+    .navigation-item:hover a {
+      color: white;
+    }
+    
+    .navigation-item:hover .icons {
+      filter: invert(100%) sepia(4%) saturate(0%) hue-rotate(210deg) brightness(105%) contrast(103%);
+    }
+    
+    a {
+      display: flex;
+      text-align: center;
+      font-family: $font;
+      // font-family: $paragraph-font;
+      font-size: .9rem;
+      width: 100%;
+      text-decoration: none;
+      color: $links-color;
+    }
+  }
+}

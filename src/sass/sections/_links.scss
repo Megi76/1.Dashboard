@@ -1,0 +1,93 @@
+.links {
+  grid-column: 5/21;
+  grid-row: 17/28;
+  margin: 1em;
+  background-color: white;
+  color: $links-color;
+  padding: 1rem;
+}
+
+.links-page {
+  grid-column: 5/21;
+  grid-row: 4/16;
+  margin: 1em;
+  background-color: white;
+  color: $links-color;
+  padding: 1rem;
+}
+
+.links-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  h3 {
+    width: 100%;
+    text-transform: uppercase;
+    font-family: $paragraph-font;
+
+  }
+
+  hr {
+    @include horizontal-line;
+
+    margin: 1.3rem 0;
+  }
+
+  .btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      color: white;
+      text-align: center;
+      font-family: $font;
+    }
+  }
+
+  .links {
+    width: 65%;
+
+    .single-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: $border;
+      border-top: $border;
+      font-family: $font;
+      font-size: medium;
+
+      a {
+        text-decoration: none;
+        color: #54a0ff;
+      }
+
+      .icons {
+        width: 1rem;
+        height: 1rem;
+        margin: .3rem;
+        filter: invert(94%) sepia(94%) saturate(25%) hue-rotate(13deg) brightness(105%) contrast(108%);
+      }
+    }
+
+    .single-link:hover {
+      background-color: $background-color;
+
+      .icons {
+        @include icons;
+        width: 1rem;
+        height: 1rem;
+        margin: .3rem;
+      }
+
+      .icons:hover {
+        width: 1.3rem;
+        height: 1.3rem;
+        filter: invert(70%) sepia(27%) saturate(4479%) hue-rotate(358deg) brightness(103%) contrast(106%);
+      }
+    }
+  }
+} 

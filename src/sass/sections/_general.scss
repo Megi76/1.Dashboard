@@ -1,0 +1,161 @@
+.general-statistic {
+  grid-column: 5/21;
+  grid-row: 3/17;
+  margin: 4.5rem 1rem 1rem;
+  background-color: white;
+  color: $links-color;
+  padding: 1rem;
+  font-family: $font;
+
+  p:first-child {
+    font-weight: bold;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    font-family: $paragraph-font;
+  }
+
+  hr {
+    @include horizontal-line;
+
+    margin: 1.3rem 0;
+  }
+
+  .calendar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    input {
+      width: 20%;
+      border: $border;
+      padding: 0.6rem;
+      color: $links-color;
+
+      &:hover {
+        border: $lightGrey 2px solid;
+        background-color: $background-color;
+      }
+    }
+
+    button {
+      position: relative;
+      width: 2.5rem;
+      margin-left: 0.7rem;
+    }
+
+    .icons {
+      @include icons;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      filter: invert(100%) sepia(4%) saturate(0%) hue-rotate(210deg) brightness(105%) contrast(103%);
+    }
+  }
+
+  .table {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(15, auto);
+    align-items: center;
+
+    .table1 {
+      grid-row: 1/2;
+      grid-column: 4/10;
+    }
+
+    .table2 {
+      grid-row: 1/2;
+      grid-column: 11/17;
+    }
+
+    .table3 {
+      grid-row: 2/3;
+      grid-column: 4/10;
+    }
+
+    .table4 {
+      grid-row: 2/3;
+      grid-column: 11/17;
+    }
+
+    .chart-title {
+      grid-row: 3/5;
+      grid-column: 4/10;
+      margin-top: 2rem;
+    }
+
+    .chart-container {
+      grid-row: 5/6;
+      grid-column: 8/14;
+      display: flex;
+      justify-content: space-around;
+      padding: 2rem;
+    }
+
+    .chart-data {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0.6rem 1rem;
+      width: auto;
+      background-color: $background-color;
+    }
+
+    .chart-data .color {
+      background-color: #7ed6df;
+      width: 1rem;
+      height: 1rem;
+      margin-right: 0.5rem;
+      border-radius: 50%;
+    }
+
+    .chart-data .color2 {
+      background-color: #ffa801;
+    }
+
+    .chart-data .color3 {
+      background-color: #6ab04c;
+    }
+
+    .chart-data-2 {
+      margin: 0 2rem;
+    }
+
+    .chart-data-3 {
+      background-color: transparent;
+    }
+  }
+
+  .data_table {
+    display: flex;
+    border-bottom: $border;
+    justify-content: space-between;
+
+    p:first-child {
+      width: auto;
+    }
+
+    p:nth-child(2) {
+      width: auto;
+    }
+  }
+}
+
+.scroll-wrapper {
+  grid-row: 6/16;
+  grid-column: 1/21;
+  display: block;
+  width: 70%;
+  overflow-x: auto;
+  justify-self: center;
+}
+
+.scroll-wrapper .chart {
+  width: auto;
+  max-width: 100%;
+}

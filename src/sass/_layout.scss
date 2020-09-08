@@ -1,0 +1,25 @@
+body {
+  box-sizing: border-box;
+  background-color: $background-color;
+  margin: 0;
+  padding: 0;
+}
+
+.main-wrapper {
+  display: grid;
+  grid-template-columns: repeat(21, auto);
+  grid-template-rows: repeat(28, auto);
+  width: 100%;
+  height: 100%;
+  background-color: $background-color;
+}
+
+#pages  {
+  > * {
+    display: none;
+  }
+
+  > .active {
+    display: grid;
+  }
+} 

@@ -1,0 +1,113 @@
+.side-nav {
+  grid-row: 1/28;
+  grid-column: 1/5;
+  background-color: $sidebar-color;
+  z-index: 2;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+
+  .side-nav-top {
+    display: flex;
+    justify-content: space-between;
+    border: none !important;
+    margin: 0;
+
+    .logo {
+      color: $background-color;
+      margin-left: .5rem;
+      font-family: $logo-font;
+    }
+  }
+
+  hr {
+    @include horizontal-line;
+  }
+}
+
+.hamburger {
+  padding: 1.3rem;
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+
+  .hamburger__box {
+    width: 1.5rem;
+    height: 1rem;
+    display: inline-block;
+    position: relative;
+
+    .hamburger__inner {
+      @include hamburger-line;
+
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: .2s .1s;
+    }
+
+    .hamburger__inner::before,
+    .hamburger__inner::after {
+      @include hamburger-line;
+
+      content: '';
+      left: 0;
+      transition: $transitions;
+    }
+
+    .hamburger__inner::before {
+      top: -9px;
+    }
+
+    .hamburger__inner::after {
+      top: 9px;
+    }
+  }
+}
+
+.hamburger--active .hamburger__inner {
+  background-color: transparent !important;
+
+  &::before {
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  &::after {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+}
+
+.manager {
+  margin-top: 1rem;
+  font-family: $font;
+
+  h4 {
+    color: $links-color;
+    text-transform: uppercase;
+    margin-left: 1rem;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    color: $blue;
+    text-decoration: none;
+    font-size: 0.9rem;
+
+    img {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      margin: 0 0.8rem 0 1rem;
+    }
+  }
+
+  a:hover {
+    background-color: $hover-background;
+    color: white;
+    text-decoration: underline;
+    border-left: orange solid 4px;
+  }
+}
