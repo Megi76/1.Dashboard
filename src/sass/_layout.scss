@@ -14,12 +14,10 @@ body {
   background-color: $background-color;
 }
 
-#pages  {
-  > * {
-    display: none;
-  }
 
-  > .active {
-    display: grid;
+@media (max-width: 820px) {
+  .main-wrapper {
+    grid-template-columns: repeat(10, auto);
+    grid-template-rows: repeat(14, auto);
   }
-} 
+}

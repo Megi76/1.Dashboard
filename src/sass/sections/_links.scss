@@ -1,10 +1,11 @@
 .links {
-  grid-column: 5/21;
+  grid-column: 6/21;
   grid-row: 17/28;
   margin: 1em;
-  background-color: white;
+  background-color: $sections-color;
   color: $links-color;
   padding: 1rem;
+  font-family: $font;
 }
 
 .links-page {
@@ -26,7 +27,6 @@
     width: 100%;
     text-transform: uppercase;
     font-family: $paragraph-font;
-
   }
 
   hr {
@@ -47,6 +47,12 @@
       font-family: $font;
     }
   }
+
+  button:hover {
+    background-color: $button-hover;
+    cursor: pointer;
+  }
+
 
   .links {
     width: 65%;
@@ -90,4 +96,33 @@
       }
     }
   }
-} 
+}
+
+@media (max-width: 820px) {
+  .links {
+    width: 80%;
+  }
+
+  .links-inner {
+    justify-content: left;
+  }
+
+  .links-inner .links .single-link {
+    font-size: smaller;
+    justify-content: space-between;
+    width: 140%;
+  }
+
+  .btn-container button {
+    height: 30px;
+    width: 80px;
+  }
+
+  .links-inner .btn-container button {
+    font-size: smaller;
+  }
+
+  .links-inner h3 {
+    font-size: medium;
+  }
+}
