@@ -5,6 +5,7 @@
   position: sticky;
   top: 0;
   height: auto;
+  width: 190px;
 
   .side-nav-top {
     display: flex;
@@ -132,9 +133,14 @@
 }
 
 @media (max-width: 820px) {
-  .side-nav .side-nav-top {
+  .side-nav {
     width: auto;
   }
+
+  .side-nav .side-nav-top {
+    width: 170px;
+  }
+
 
   .navigation .navigation-list .icons {
     width: 1rem;
@@ -150,10 +156,6 @@
     display: flex;
   }
 
-  .navigation .navigation-list a {
-    left: 0;
-
-  }
 
   .navigation-list-side li {
     margin-bottom: 1px;

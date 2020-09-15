@@ -89,8 +89,8 @@
 
     .data_table:hover {
       background-color: $background-color;
-
     }
+    
     .chart-title {
       grid-row: 3/5;
       grid-column: 4/10;
@@ -170,7 +170,7 @@
 
 @media (max-width: 820px) {
   .general-statistic {
-    width: 80%;
+    width: 75%;
   }
 
   .calendar {
